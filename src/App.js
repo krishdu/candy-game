@@ -1,8 +1,9 @@
 
 import './App.css';
 import { useState } from 'react';
-import utils from './utils';
-import PlayNumber from './candy_components/PlayNumber';
+import { utils } from './utils';
+import CandyDisplay from './candy_components/CandyDisplay';
+import NumberDisplay from './candy_components/NumberDisplay';
 
 
 function App() {
@@ -14,23 +15,10 @@ function App() {
       </div>
       <div className="body">
         <div className="left"> 
-
-         { 
-          utils.range(1, stars).map(startId =>
-            <div key={startId} className="candy" />
-          )
-         }
-
+          <CandyDisplay count={stars}/>
         </div>
-
         <div className="right">
-
-          {
-            utils.range(1, 9).map(numId =>
-              <PlayNumber key={numId} number={numId}/>
-            )
-          }
-         
+          <NumberDisplay starCount={stars}/>
         </div>
       </div>
       <div className="timer h5">Time Remaining: 10</div>
