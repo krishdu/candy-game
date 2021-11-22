@@ -11,10 +11,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## ✨ My Thought Process ✨
 ```
-Step 1
+Phase 1
 ```
-+ Create the UI first
++ Create the basic UI to start with
 
+```
+Phase 2
+```
++ create a CandyDisplay component (left)
++ create a NumberDisplay component (right)
+
+```
+Phase 3
+```
++ create a state hook to keep the count of candy
++ pass the hook to number conponent to handle and change candy count in each click.
+
+```
+Phase 4
+```
++ NumberDisplay component hold two state hook for available and candidate button status
++ the current status need pass to PlayNumber component to color the button according to the button status
+
+```
+Phase 5
+```
++ PlayNumber component is reponsible to handle each user click ans it will change count of candies
 
 ## Available Scripts
 

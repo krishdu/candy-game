@@ -7,7 +7,7 @@ import NumberDisplay from './candy_components/NumberDisplay';
 
 
 function App() {
-  const [stars, setStars] = useState(utils.random(1, 9));
+  const [candies, setCandies] = useState(utils.random(1, 9));
   return ( 
     <div className="game p-2">
       <div className="help text-primary h5">
@@ -15,10 +15,12 @@ function App() {
       </div>
       <div className="body">
         <div className="left"> 
-          <CandyDisplay count={stars}/>
+          <CandyDisplay count={candies}/>
         </div>
         <div className="right">
-          <NumberDisplay starCount={stars}/>
+          <NumberDisplay
+             candyCount={candies}
+             setCandies={setCandies}/>
         </div>
       </div>
       <div className="timer h5">Time Remaining: 10</div>
