@@ -1,13 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { utils } from "../utils";
+import PlayAgain from "./PlayAgain";
 import PlayNumber from "./PlayNumber";
 
 const NumberDisplay = props => {
   const [availableNums, setAvailableNums] = useState(utils.range(1, 9));
   const [candidateNums, setCandidateNums] = useState([]);
+  //introduce timer
+  const [secondsLeft, setSecondsLeft] = useState(10);
+
+	useEffect(() => {
+  	if (secondsLeft > 0 && availableNums.length > 0) {
+      const timerId = setTimeout(() => {
+	      setSecondsLeft(secondsLeft - 1);
+      }, 1000);
+    	return () => clearTimeout(timerId);
+  	}
+  });  
 
   //evaluate button status
   const candidatesAreWrong = utils.sum(candidateNums) > props.candyCount; 
+  const gameStatus = availableNums.length === 0 
+  	? 'won'
+    : secondsLeft === 0 ? 'lost' : 'active'  
+
   const numberStatus = number => {
     if(!availableNums.includes(number)) {
       return 'used';
@@ -19,7 +35,7 @@ const NumberDisplay = props => {
   }
 
   const onNumberClick = (number, currentStatus) => {
-    if(currentStatus === 'used')  {
+    if(gameStatus !== 'active' || currentStatus === 'used')  {
       return;
     }
 
@@ -40,8 +56,17 @@ const NumberDisplay = props => {
     }
   }
 
+  if(gameStatus !== 'active'){
+    return (
+      <>
+        <PlayAgain onClick={props.resetGame} gameStatus={gameStatus} />
+      </>
+    )
+  }
+
   return (
     <>
+    <div>
           {
             utils.range(1, 9)
                  .map( numId =>
@@ -51,7 +76,10 @@ const NumberDisplay = props => {
                       number={numId}
                       onClick={onNumberClick}/>
                      )
-          } 
+          }
+          
+    </div>
+    <div className="timer h5">Time Remaining:  {secondsLeft}</div> 
     </>
   );
 };

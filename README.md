@@ -38,6 +38,15 @@ Phase 5
 ```
 + PlayNumber component is reponsible to handle each user click ans it will change count of candies
 
+```
+Phase 6
+```
++ Implement time interval using setTimeout
+
+```
+Phase 7
+```
++ handle each won and lost case by unmounting and remounting concept.
 ## Available Scripts
 
 In the project directory, you can run:
