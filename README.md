@@ -47,6 +47,7 @@ Phase 6
 Phase 7
 ```
 + handle each won and lost case by unmounting and remounting concept.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -56,3 +57,16 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Deploy
++
+```
+heroku login
+```
++ 
+```
+heroku create candy-game-play
+```
++ 
+```
+git push heroku master
+```
