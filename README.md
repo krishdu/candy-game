@@ -5,7 +5,8 @@
 > To win the game player need to cover all the numbers (1 to 9) in a stipulated time.
  
 * Learnings: 
-    
+    + How to hold state using hook.
+    + Breakdown component into small testable part.
     
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
