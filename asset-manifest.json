@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/candy-game/static/css/main.45664468.chunk.css",
+    "main.js": "/candy-game/static/js/main.e327d75c.chunk.js",
+    "main.js.map": "/candy-game/static/js/main.e327d75c.chunk.js.map",
+    "runtime-main.js": "/candy-game/static/js/runtime-main.ddb86691.js",
+    "runtime-main.js.map": "/candy-game/static/js/runtime-main.ddb86691.js.map",
+    "static/js/2.d3b64f27.chunk.js": "/candy-game/static/js/2.d3b64f27.chunk.js",
+    "static/js/2.d3b64f27.chunk.js.map": "/candy-game/static/js/2.d3b64f27.chunk.js.map",
+    "static/js/3.45da969f.chunk.js": "/candy-game/static/js/3.45da969f.chunk.js",
+    "static/js/3.45da969f.chunk.js.map": "/candy-game/static/js/3.45da969f.chunk.js.map",
+    "index.html": "/candy-game/index.html",
+    "static/css/main.45664468.chunk.css.map": "/candy-game/static/css/main.45664468.chunk.css.map",
+    "static/js/2.d3b64f27.chunk.js.LICENSE.txt": "/candy-game/static/js/2.d3b64f27.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ddb86691.js",
+    "static/js/2.d3b64f27.chunk.js",
+    "static/css/main.45664468.chunk.css",
+    "static/js/main.e327d75c.chunk.js"
+  ]
+}
